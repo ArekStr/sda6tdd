@@ -15,10 +15,7 @@ public class Writer {
             nameSection = "my friend";
         }
 
-        if (StringUtils.isAllUpperCase(nameSection)) {
-            greeting = StringUtils.upperCase(greeting);
 
-        }
         String output = greeting + ", " +nameSection + "!";
         return isAllUppercase(names) ? StringUtils.upperCase(output) : output;
     }
