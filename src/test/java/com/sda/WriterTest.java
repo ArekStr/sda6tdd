@@ -46,5 +46,20 @@ public class WriterTest {
 
      }
 
+     @Test
+    public void sayHelloWithOneEmptySpace(){
+        String name = " ";
+        String result = writer.sayHello(name);
+        Assert.assertEquals("Hello my friend!", result);
+
+     }
+
+     @Test
+    public void sayHelloWithBlankName(){
+        String name = "    ";
+        String result = writer.sayHello(name);
+        Assert.assertEquals("Hello my friend!", result);
+     }
+
 }
 

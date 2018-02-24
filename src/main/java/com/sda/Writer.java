@@ -7,13 +7,17 @@ public class Writer {
 
         String nameInMessage = name;
         String greeting = "Hello";
-        if (nameInMessage == null || "".equals(nameInMessage)) {
-            nameInMessage = " my friend";
+        String isEmpty= " ";
+
+        if (StringUtils.isBlank(nameInMessage)) {
+            nameInMessage = "my friend";
         }
 
-            if  (StringUtils.isAllUpperCase(nameInMessage)) {
-                greeting = StringUtils.upperCase(greeting);
-            }
-        return greeting +", " + nameInMessage + "!";
+        if (StringUtils.isAllUpperCase(nameInMessage)) {
+            greeting = StringUtils.upperCase(greeting);
+
+        }
+        return greeting + " " + nameInMessage + "!";
     }
 }
+
