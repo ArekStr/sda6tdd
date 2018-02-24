@@ -27,7 +27,7 @@ public class WriterTest {
 
         String name="";
         String result = writer.sayHello("");
-        Assert.assertEquals("Message for emtpy name should be different", "Hello my friend!", result);
+        Assert.assertEquals("Message for emtpy name should be different", "Hello, my friend!", result);
 
     }
      public void sayHelloWithNullName(){
@@ -50,7 +50,7 @@ public class WriterTest {
     public void sayHelloWithOneEmptySpace(){
         String name = " ";
         String result = writer.sayHello(name);
-        Assert.assertEquals("Hello my friend!", result);
+        Assert.assertEquals("Hello, my friend!", result);
 
      }
 
@@ -58,8 +58,13 @@ public class WriterTest {
     public void sayHelloWithBlankName(){
         String name = "    ";
         String result = writer.sayHello(name);
-        Assert.assertEquals("Hello my friend!", result);
+        Assert.assertEquals("Hello, my friend!", result);
      }
-
+     @Test
+    public void sayHelloWithMultipleNames() {
+         String name = "Szymon, Jan, Anna";
+         String result = writer.sayHello(name);
+         Assert.assertEquals("Hello, Szymon, Jan and Anna!", result);
+     }
 }
 
