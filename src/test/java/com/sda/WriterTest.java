@@ -64,7 +64,13 @@ public class WriterTest {
     public void sayHelloWithMultipleNames() {
          String name = "Szymon, Jan, Anna";
          String result = writer.sayHello(name);
-         Assert.assertEquals("Hello, Szymon, Jan and Anna!", result);
+         Assert.assertEquals("Hello, Szymon,  Jan and  Anna!", result);
+     }
+     @Test
+    public  void sayHelloWithMultipleCaputalzedNames(){
+        String name = "SZYMON,JAN,ANNA";
+        String result = writer.sayHello(name);
+        Assert.assertEquals("HELLO, SZYMON, JAN AND ANNA!",result);
      }
 }
 

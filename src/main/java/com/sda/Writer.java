@@ -29,10 +29,10 @@ public class Writer {
         for (int i = 0; i < names.length; i++) {
             stringBuilder.append(names[i]);
             if (i < names.length -2 ){
-                stringBuilder.append(",");
+                stringBuilder.append(", ");
 
              } else if (i == names.length -2){
-                stringBuilder.append(" and");
+                stringBuilder.append(" and ");
             }
 
 
