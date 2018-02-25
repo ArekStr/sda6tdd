@@ -24,7 +24,7 @@ public class BankTest {
         //Then
         Assert.assertTrue("method retured false", result);
 
-        Assert.assertEquals("user is not present in bank list", 1, bank.getUsers().size());
+        Assert.assertEquals("user is not present in bank list", 1, bank.getNumberOfUsers());
     }
 
     @Test
@@ -35,7 +35,7 @@ public class BankTest {
         boolean result = bank.addUser(user);
         //then
         Assert.assertFalse("method ruterned true", result);
-        Assert.assertEquals("User is present in bank list", 0, bank.getUsers().size());
+        Assert.assertEquals("User is present in bank list", 0, bank.getNumberOfUsers());
     }
 }
 
