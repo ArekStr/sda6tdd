@@ -1,6 +1,16 @@
 package com.sda.Bank;
 
 public class Acount {
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private int userId;
     private long amount;
 

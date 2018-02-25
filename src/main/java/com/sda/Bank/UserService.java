@@ -23,4 +23,9 @@ public class UserService {
         }
         return result;
     }
+
+    public boolean isUserPresent(int userId) {
+        return users.stream()
+                .anyMatch(e -> userId== e.getId());
+    }
 }
